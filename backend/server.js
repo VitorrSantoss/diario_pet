@@ -10,7 +10,7 @@ const app = express();
 
 // Configuração do CORS para Produção
 const corsOptions = {
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000', 
+  origin: process.env.FRONTEND_URL || 'https://diario-pet.vercel.app', 
   credentials: true,
   optionsSuccessStatus: 200
 };
