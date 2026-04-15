@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Diário Pet</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Diário Pet</h1>
+    <p>Seu painel inteligente</p>
+  </div>
+</header>
+
+<main>
+  <aside>
+    <div class="menu-title">Menu</div>
+    <div class="menu">
+      <button>Registros</button>
+      <button>Produtos</button>
+    </div>
+  </aside>
+
+  <div class="content">
+
+    <!-- FORM REGISTRO -->
+    <div class="card">
+      <h2>Novo Registro</h2>
+      <form id="diario-form">
+        <input type="hidden" id="diario-id" />
+        
+        <input 
+          type="text" 
+          id="titulo" 
+          placeholder="Título" 
+          required
+        >
+
+        <textarea 
+          id="descricao" 
+          rows="3" 
+          placeholder="Descrição" 
+          required
+        ></textarea>
+
+        <div class="actions">
+          <button type="submit" id="submit-btn">Salvar</button>
+          <button type="button" id="cancel-btn" class="secondary" hidden>Cancelar</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- LISTA REGISTROS -->
+    <div class="card">
+      <h2>Registros</h2>
+      <div class="status" id="status"></div>
+      <ul id="diarios-list"></ul>
+    </div>
+
+    <!-- FORM PRODUTO -->
+    <div class="card">
+      <h2>Novo Produto</h2>
+      <form id="produto-form">
+        <input type="hidden" id="produto-id" />
+
+        <input 
+          type="text" 
+          id="produto-nome" 
+          placeholder="Nome do produto" 
+          required
+        >
+
+        <input 
+          type="number" 
+          id="produto-preco" 
+          step="0.01" 
+          min="0" 
+          placeholder="Preço (R$)" 
+          required
+        >
+
+        <textarea 
+          id="produto-descricao" 
+          rows="2" 
+          placeholder="Descrição do produto"
+        ></textarea>
+
+        <div class="actions">
+          <button type="submit" id="produto-submit-btn">Salvar</button>
+          <button type="button" id="produto-cancel-btn" class="secondary" hidden>Cancelar</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- LISTA PRODUTOS -->
+    <div class="card">
+      <h2>Produtos</h2>
+      <div class="status" id="produto-status"></div>
+      <ul id="produtos-list"></ul>
+    </div>
+
+  </div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
