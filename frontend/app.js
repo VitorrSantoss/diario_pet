@@ -1,6 +1,6 @@
 // ================= CONFIG =================
-const API_URL = "https://diario-pet.onrender.com/api/diario/diarios";
-const PRODUTO_API_URL = "https://diario-pet.onrender.com/api/produto/produtos";
+const API_URL = "https://diario-pet-1.onrender.com/api/diario/diarios";
+const PRODUTO_API_URL = "https://diario-pet-1.onrender.com/api/produto/produtos";
 
 // ================= ELEMENTOS =================
 // Diário
@@ -53,7 +53,7 @@ function renderDiarios(diarios) {
     return;
   }
 
-  diarios.forEach(d => {
+  diarios.forEach((d) => {
     const li = document.createElement("li");
     li.className = "item";
 
@@ -151,7 +151,7 @@ function renderProdutos(produtos) {
     return;
   }
 
-  produtos.forEach(p => {
+  produtos.forEach((p) => {
     const li = document.createElement("li");
     li.className = "item";
 
